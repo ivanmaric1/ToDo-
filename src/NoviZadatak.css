@@ -1,0 +1,31 @@
+.NoviZadatak {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid #313131;
+  font-size: 1.6rem;
+}
+
+.NoviZadatak-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.NoviZadatak-input {
+  font-size: 1.55rem;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+}
+
+.NoviZadatak-butonjara {
+  font-size: 1.55rem;
+  background-color: transparent;
+  border: 1px solid #313131;
+  font-family: 'Montserrat', sans-serif;
+  color: #4a4a4a;
+}
+
+.NoviZadatak-butonjara:hover {
+  color: red;
+  border: 1px soldi red;
+}
