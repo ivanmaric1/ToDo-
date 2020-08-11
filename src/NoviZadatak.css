@@ -17,6 +17,12 @@
   padding: 0;
 }
 
+.NoviZadatak-input:hover,
+.NoviZadatak-input:focus {
+  border: 1px solid red;
+  outline: none;
+}
+
 .NoviZadatak-butonjara {
   font-size: 1.55rem;
   background-color: transparent;
@@ -27,5 +33,5 @@
 
 .NoviZadatak-butonjara:hover {
   color: red;
-  border: 1px soldi red;
+  border: 1px solid red;
 }

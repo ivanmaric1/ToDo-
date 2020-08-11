@@ -7,8 +7,12 @@ class Zadatak extends Component {
       <div className="Zadatak">
         {this.props.imeZadatka}
         <div className="Zadatak-gumbi">
-          <button className="Zadatak-butonjara">Uredi</button>
-          <button className="Zadatak-butonjara">X</button>
+          <button className="Zadatak-butonjara">
+            <i className="fas fa-edit"></i>
+          </button>
+          <button className="Zadatak-butonjara">
+            <i class="fas fa-trash-alt"></i>
+          </button>
         </div>
       </div>
     );

@@ -7,14 +7,17 @@ class ListaZadataka extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      zadatci: [
-        { ime: 'Nogomet' },
-        { ime: 'Košarka' },
-        { ime: 'Nogomet' },
-        { ime: 'Košarka' },
-      ],
+      zadatci: [],
     };
+    this.dodajZadatak = this.dodajZadatak.bind(this);
   }
+
+  dodajZadatak(noviZadatak) {
+    this.setState({
+      zadatci: [...this.state.zadatci, noviZadatak],
+    });
+  }
+
   render() {
     return (
       <div className="ListaZadataka">
@@ -27,7 +30,7 @@ class ListaZadataka extends Component {
             ))}
           </li>
         </ul>
-        <NoviZadatak />
+        <NoviZadatak dodajZadatak={this.dodajZadatak} />
       </div>
     );
   }

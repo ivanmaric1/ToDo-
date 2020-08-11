@@ -14,20 +14,21 @@
 }
 
 .Zadatak-gumbi {
-  width: 150px;
+  width: 100px;
   display: flex;
   justify-content: space-between;
 }
 
 .Zadatak-butonjara {
-  border: 1px solid #313131;
+  border: 1px solid transparent;
   font-size: 1.4rem;
   margin: 0;
   padding: 0.5rem;
   background-color: transparent;
+  color: #313131;
 }
 
 .Zadatak-butonjara:hover {
   color: red;
-  border: 1px solid red;
+  border: 1px solid transparent;
 }
