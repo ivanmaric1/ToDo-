@@ -10,6 +10,13 @@ class ListaZadataka extends Component {
       zadatci: [],
     };
     this.dodajZadatak = this.dodajZadatak.bind(this);
+    this.obrišiZadatak = this.obrišiZadatak.bind(this);
+  }
+
+  obrišiZadatak(id) {
+    this.setState({
+      zadatci: this.state.zadatci.filter((item) => item.id !== id),
+    });
   }
 
   dodajZadatak(noviZadatak) {
@@ -26,7 +33,12 @@ class ListaZadataka extends Component {
         <ul className="ListaZadataka-lista">
           <li className="ListaZadataka-lista-zadatak">
             {this.state.zadatci.map((item) => (
-              <Zadatak imeZadatka={item.ime} />
+              <Zadatak
+                imeZadatka={item.ime}
+                key={item.id}
+                id={item.id}
+                obrišiZadatak={this.obrišiZadatak}
+              />
             ))}
           </li>
         </ul>

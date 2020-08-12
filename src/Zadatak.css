@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   border: 1px solid #313131;
   margin: 0.3rem;
-  padding: 0.2rem 1rem;
+  padding: 0rem 1rem;
   font-weight: 400;
 }
 
@@ -26,9 +26,14 @@
   padding: 0.5rem;
   background-color: transparent;
   color: #313131;
+  cursor: pointer;
 }
 
 .Zadatak-butonjara:hover {
   color: red;
   border: 1px solid transparent;
+}
+
+.Zadatak-butonjara:focus {
+  outline: none;
 }

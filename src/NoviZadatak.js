@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import './NoviZadatak.css';
 
 class NoviZadatak extends Component {
@@ -17,7 +18,8 @@ class NoviZadatak extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault();
-    this.props.dodajZadatak(this.state);
+    const id = uuidv4();
+    this.props.dodajZadatak({ ...this.state, id });
     this.setState({ ime: '' });
   }
 
