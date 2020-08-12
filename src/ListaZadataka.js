@@ -11,6 +11,7 @@ class ListaZadataka extends Component {
     };
     this.dodajZadatak = this.dodajZadatak.bind(this);
     this.obrišiZadatak = this.obrišiZadatak.bind(this);
+    this.updateZadatak = this.updateZadatak.bind(this);
   }
 
   obrišiZadatak(id) {
@@ -23,6 +24,17 @@ class ListaZadataka extends Component {
     this.setState({
       zadatci: [...this.state.zadatci, noviZadatak],
     });
+  }
+
+  updateZadatak(id, updatedText) {
+    const updatedZadatci = this.state.zadatci.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, ime: updatedText };
+      } else {
+        return todo;
+      }
+    });
+    this.setState({ zadatci: updatedZadatci });
   }
 
   render() {
@@ -38,6 +50,7 @@ class ListaZadataka extends Component {
                 key={item.id}
                 id={item.id}
                 obrišiZadatak={this.obrišiZadatak}
+                updateZadatak={this.updateZadatak}
               />
             ))}
           </li>

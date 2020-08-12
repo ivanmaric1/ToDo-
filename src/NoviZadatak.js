@@ -34,7 +34,7 @@ class NoviZadatak extends Component {
             className="NoviZadatak-input"
             value={this.state.ime}
             onChange={this.handleChange}
-          ></input>
+          />
           <button className="NoviZadatak-butonjara">Dodaj zadatak!</button>
         </div>
       </form>

@@ -14,8 +14,9 @@
 .NoviZadatak-input {
   font-size: 1.55rem;
   font-family: 'Montserrat', sans-serif;
-  padding: 0;
   cursor: pointer;
+  padding: 0.5rem 0.2rem;
+  border: 1px solid transparent;
 }
 
 .NoviZadatak-input:hover,
