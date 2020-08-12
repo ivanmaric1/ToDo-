@@ -5,7 +5,7 @@ import './NoviZadatak.css';
 class NoviZadatak extends Component {
   constructor(props) {
     super(props);
-    this.state = { ime: '' };
+    this.state = { ime: '', imaPodataka: true };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -19,8 +19,13 @@ class NoviZadatak extends Component {
   handleSubmit(evt) {
     evt.preventDefault();
     const id = uuidv4();
-    this.props.dodajZadatak({ ...this.state, id });
-    this.setState({ ime: '' });
+    if (this.state.ime === '') {
+      this.setState({ imaPodataka: false });
+    } else {
+      this.setState({ imaPodataka: true });
+      this.props.dodajZadatak({ ...this.state, id });
+      this.setState({ ime: '' });
+    }
   }
 
   render() {
@@ -37,6 +42,13 @@ class NoviZadatak extends Component {
           />
           <button className="NoviZadatak-butonjara">Dodaj zadatak!</button>
         </div>
+        {this.state.imaPodataka ? (
+          console.log('Uspješno upisan zadatak!')
+        ) : (
+          <p className="NoviZadatak-alert">
+            * * * Molim te da uneseš zadatak!!* * *
+          </p>
+        )}
       </form>
     );
   }

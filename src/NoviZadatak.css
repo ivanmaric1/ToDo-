@@ -1,6 +1,6 @@
 .NoviZadatak {
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 1rem 0.3rem;
   border-top: 1px solid #313131;
   font-size: 1.6rem;
 }
@@ -41,4 +41,11 @@
 
 .NoviZadatak-butonjara:focus {
   outline: none;
+}
+
+.NoviZadatak-alert {
+  margin: 15px 0 0 0;
+  color: red;
+  font-size: 1.5rem;
+  text-align: center;
 }

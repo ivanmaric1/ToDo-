@@ -44,7 +44,9 @@ class Zadatak extends Component {
               onChange={this.handleChange}
               name="zadatak"
             />
-            <button className="Edit-butonjara">Spremi</button>
+            <button className="Edit-butonjara">
+              <i class="fas fa-save"></i>
+            </button>
           </form>
         </div>
       );

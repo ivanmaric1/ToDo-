@@ -45,7 +45,7 @@
 }
 
 .Edit-input {
-  width: 380px;
+  width: 400px;
   font-size: 1.4rem;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
@@ -66,7 +66,7 @@
   background-color: transparent;
   color: #313131;
   cursor: pointer;
-  width: 150px;
+  width: 80px;
 }
 
 .Edit-butonjara:hover {
